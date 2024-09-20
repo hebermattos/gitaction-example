@@ -43,7 +43,6 @@ jobs:
         run: |
           cd ./publish
           ftp -inv $FTP_HOST <<EOF
-          debug
           user $FTP_USERNAME $FTP_PASSWORD
           cd /www.hebermattos.somee.com # Altere para o diretório desejado no FTP
           mput *
