@@ -50,6 +50,6 @@ jobs:
             # Local directory.
             local_dir: ./publish
             # Remote directory.
-            remote_dir: ./www.hebermattos.somee.com 
+            server_dir: ./www.hebermattos.somee.com 
 
           
