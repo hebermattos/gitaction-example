@@ -35,15 +35,21 @@ jobs:
         run: sudo apt-get install -y ftp
 
       # Deploy to FTP server
-      - name: Deploy to FTP server
+      - name: FTP Mirror
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        run: |
-          cd ./publish
-          ftp -inv $FTP_HOST <<EOF
-          user $FTP_USERNAME $FTP_PASSWORD
-          cd /www.hebermattos.somee.com # Altere para o diretório desejado no FTP
-          mput *
-          bye
+        # You may pin to the exact commit or the version.
+        # uses: modern-dev/ftp-mirror@700ec6b399f45cbd58572085856c6fe2114c8342
+        uses: modern-dev/ftp-mirror@v2
+        with:
+            server: ${{ secrets.FTP_HOST }}
+            user: ${{ secrets.FTP_USERNAME }}
+            password: ${{ secrets.FTP_PASSWORD }}
+            # Local directory.
+            local_dir: ./publish
+            # Remote directory.
+            remote_dir: ./www.hebermattos.somee.com 
+
+          
