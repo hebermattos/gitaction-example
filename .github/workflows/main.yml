@@ -30,20 +30,15 @@ jobs:
       - name: Publish the project
         run: dotnet publish --configuration Release --output ./publish --no-build
 
-      # Install FTP client (to use for FTP transfer)
-      - name: Install FTP client
-        run: sudo apt-get install -y ftp
-
       # Deploy to FTP server
-      - name: FTP Mirror
-        uses: modern-dev/ftp-mirror@v2
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
         with:
             server: ${{ secrets.FTP_HOST }}
-            user: ${{ secrets.FTP_USERNAME }}
+            username: ${{ secrets.FTP_USERNAME }}
             password: ${{ secrets.FTP_PASSWORD }}
-            # Local directory.
-            local_dir: ./publish
-            # Remote directory.
-            remote_dir: ./www.hebermattos.somee.com 
+            local-dir: ./publish
+            server-dir: ./www.hebermattos.somee.com
+            method: ftp-sync
 
           
