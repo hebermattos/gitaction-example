@@ -42,7 +42,7 @@ jobs:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
           cd ./publish
-          ftp -inv $FTP_HOST
+          ftp -invp $FTP_HOST <<EOF
           user $FTP_USERNAME $FTP_PASSWORD
           cd /www.hebermattos.somee.com # Altere para o diretório desejado no FTP
           mput *
