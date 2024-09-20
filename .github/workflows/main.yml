@@ -36,12 +36,6 @@ jobs:
 
       # Deploy to FTP server
       - name: FTP Mirror
-        env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        # You may pin to the exact commit or the version.
-        # uses: modern-dev/ftp-mirror@700ec6b399f45cbd58572085856c6fe2114c8342
         uses: modern-dev/ftp-mirror@v2
         with:
             server: ${{ secrets.FTP_HOST }}
