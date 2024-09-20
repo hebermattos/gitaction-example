@@ -44,7 +44,7 @@ jobs:
           cd ./publish
           ftp -inv $FTP_HOST <<EOF
           user $FTP_USERNAME $FTP_PASSWORD
-          cd /path/to/remote/directory # Altere para o diretório desejado no FTP
+          cd /www.hebermattos.somee.com # Altere para o diretório desejado no FTP
           mput *
           bye
           EOF
