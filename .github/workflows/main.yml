@@ -41,17 +41,5 @@ jobs:
             server-dir: ./www.hebermattos.somee.com/
             method: ftp-sync
 
-      - name: Send Email Notification
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.office365.com
-          server_port: 587
-          username: ${{ secrets.EMAIL_USERNAME }} # O email de onde será enviado
-          password: ${{ secrets.EMAIL_PASSWORD }} # Senha ou app password
-          subject: Deploy Completo
-          body: O deploy foi concluído com sucesso!
-          to: hebermattos@outlook.com
-          from: 'GitHub Actions <${{ secrets.EMAIL_USERNAME }}>'
-          secure: true  
 
           
