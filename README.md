@@ -1,0 +1,1 @@
+[![Deploy ASP.NET Core API via FTP](https://github.com/hebermattos/gitaction-example/actions/workflows/main.yml/badge.svg)](https://github.com/hebermattos/gitaction-example/actions/workflows/main.yml)
