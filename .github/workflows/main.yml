@@ -52,6 +52,6 @@ jobs:
           body: O deploy foi concluído com sucesso!
           to: hebermattos@outlook.com
           from: 'GitHub Actions <${{ secrets.EMAIL_USERNAME }}>'
-          secure: true  
+          secure: false  
 
           
