@@ -26,7 +26,7 @@ jobs:
 
       # Backup deployment folder
       - name: Backup
-        run: xcopy \heber-deploy\ \backups\ /D /E /Y /S
+        run: xcopy \heber-deploy\ \backups\heber-deploy\ /D /E /Y /S
 
       # Copy files to deployment folder
       - name: Copy files to deployment folder
