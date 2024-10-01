@@ -26,11 +26,11 @@ jobs:
 
       # Backup deployment folder
       - name: Backup
-        run: cp -r /heber-deploy/ /backup-heber-deploy/
+        run: cp -rfu /heber-deploy/ /backups/
 
       # Copy files to deployment folder
       - name: Copy files to deployment folder
-        run: cp -r ./publish/* /heber-deploy
+        run: cp -rfu ./publish/* /heber-deploy
 
 
           
