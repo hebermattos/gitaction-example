@@ -1,4 +1,4 @@
-name: Deploy ASP.NET Core API via File Copy
+name: Deploy ASP.NET Core Site via File Copy
 
 on:
   workflow_dispatch:
