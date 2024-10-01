@@ -30,7 +30,7 @@ jobs:
 
       # Copy files to deployment folder
       - name: Copy files to deployment folder
-        run: robocopy .\publish\* \heber-deploy\ /MIR
+        run: robocopy .\publish\ \heber-deploy\ /MIR
 
 
           
