@@ -1,4 +1,4 @@
-name: Deploy ASP.NET Core API via FTP
+name: Deploy ASP.NET Core Site via FTP
 
 on:
   workflow_dispatch:
