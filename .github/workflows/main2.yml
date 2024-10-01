@@ -24,6 +24,10 @@ jobs:
       - name: Publish the project
         run: dotnet publish --configuration Release --output ./publish --no-build
 
+      # Backup deployment folder
+      - name: Backup
+        run: cp -r /heber-deploy/* /backup-heber-deploy
+
       # Copy files to deployment folder
       - name: Copy files to deployment folder
         run: cp -r ./publish/* /heber-deploy
