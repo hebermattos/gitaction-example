@@ -26,11 +26,11 @@ jobs:
 
       # Backup deployment folder
       - name: Backup
-        run: robocopy \heber-deploy\ \backups\heber-deploy\ /MIR
+        run: xcopy \heber-deploy\ \backups\heber-deploy\ /D /E /Y /S
 
       # Copy files to deployment folder
       - name: Copy files to deployment folder
-        run: robocopy .\publish\ \heber-deploy\ /MIR
+        run: xcopy .\publish\ \heber-deploy\ /D /E /Y /S
 
 
           
